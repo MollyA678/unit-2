@@ -44,22 +44,18 @@ function getData(map){
             //Making it so the properties show up when you hover
             onEachFeature: function(feature, layer){
     
-                console.log(feature);
-                console.log(feature.properties);
-
-
                 var popupContent = 
-                "<p><b>City:</b> " + feature.properties.city + "</p>" +
-                "<p><b>Country:</b> " + feature.properties.country + "</p>" +
-                "<p><b>Population:</b> " + feature.properties.population + "</p>";
+                "<p><b>City:</b> " + feature.properties.City + "</p>" +
+                "<p><b>Country:</b> " + feature.properties.Country + "</p>" +
+                "<p><b>Population:</b> " + feature.properties.Population + "</p>";
 
                 layer.bindPopup(popupContent);
 
                 layer.on({
-                    mouseover: function () {
+                    mouseover: function (e) {
                         this.openPopup();
                     },
-                    mouseout: function () {
+                    mouseout: function (e) {
                         this.closePopup();
                     }
                 });
