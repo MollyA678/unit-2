@@ -40,7 +40,26 @@ function getData(map){
             var geojsonLayer =L.geoJson(json, {
                 pointToLayer: function (feature, latlng){
                     return L.circleMarker(latlng, geojsonMarkerOptions);
-                }
+                },
+            //Making it so the properties show up when you hover
+            onEachFeature: function(feature, layer){
+                var popupContent = 
+                  "<b>City:</b> " + feature.properties.city + "<br>" +
+                  "<b>Country:</b> " + feature.properties.country + "<br>" +
+                  "<b>Population:</b> " + feature.properties.population;
+
+                layer.bindPopup(popupContent);
+
+                layer.on({
+                    mouseover: function () {
+                        this.openPopup();
+                    },
+                    mouseout: function () {
+                        this.closePopup();
+                    }
+                });
+            }
+
             }).addTo(map);
             //Trying to get map to zoom right to the data. 
             map.fitBounds(geojsonLayer.getBounds());
