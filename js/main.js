@@ -7,7 +7,7 @@ function createMap(){
 
     //create the map
     map = L.map('map', {
-        center: [110, 15],
+        center: [0, 0],
         zoom: 2
     });
 
@@ -42,6 +42,8 @@ function getData(map){
                     return L.circleMarker(latlng, geojsonMarkerOptions);
                 }
             }).addTo(map);
+            //Trying to get map to zoom right to the data. 
+            map.fitBounds(geojsonLayer.getBounds());
         })
 };
 
