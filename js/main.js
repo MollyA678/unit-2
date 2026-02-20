@@ -7,7 +7,7 @@ function createMap(){
 
     //create the map
     map = L.map('map', {
-        center: [0, 0],
+        center: [110, 15],
         zoom: 2
     });
 
@@ -22,7 +22,7 @@ function createMap(){
 
 //function to retrieve the data and place it on the map
 function getData(map){
-    fetch("data/population_cities.geojson")
+    fetch("./data/population_cities.geojson")
 		.then(function(response){
 			return response.json();
 		})
