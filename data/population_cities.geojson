@@ -1,0 +1,517 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Tokyo",
+        "Country": "Japan",
+        "Population": "37,468,000",
+        "Continent": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.6917,
+          35.6895
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Jakarta",
+        "Country": "Indonesia",
+        "Population": "33,517,000",
+        "Continent": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.8456,
+          -6.2088
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Chongqing",
+        "Country": "China",
+        "Population": "32,838,000",
+        "Continent": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.5516,
+          29.563
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Shanghai",
+        "Country": "China",
+        "Population": "29,867,900",
+        "Continent": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4737,
+          31.2304
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Guangzhou",
+        "Country": "China",
+        "Population": "26,638,000",
+        "Continent": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.2644,
+          23.1291
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Manila",
+        "Country": "Philippines",
+        "Population": "25,482,000",
+        "Continent": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.9842,
+          14.5995
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Seoul",
+        "Country": "South Korea",
+        "Population": "24,963,000",
+        "Continent": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.978,
+          37.5665
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Beijing",
+        "Country": "China",
+        "Population": "22,189,100",
+        "Continent": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.4074,
+          39.9042
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Chengdu",
+        "Country": "China",
+        "Population": "20,813,000",
+        "Continent": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          104.0665,
+          30.5728
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Osaka",
+        "Country": "Japan",
+        "Population": "19,281,000",
+        "Continent": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.5023,
+          34.6937
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Shenzhen",
+        "Country": "China",
+        "Population": "16,808,000",
+        "Continent": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.0579,
+          22.5431
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Ho Chi Minh City",
+        "Country": "Vietnam",
+        "Population": "15,145,000",
+        "Continent": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.6297,
+          10.8231
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Tianjin",
+        "Country": "China",
+        "Population": "13,215,000",
+        "Continent": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          117.3616,
+          39.3434
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Bangkok",
+        "Country": "Thailand",
+        "Population": "10,156,000",
+        "Continent": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.5018,
+          13.7563
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Nagoya",
+        "Country": "Japan",
+        "Population": "9,507,000",
+        "Continent": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          136.9066,
+          35.1815
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Nanjing",
+        "Country": "China",
+        "Population": "8,245,000",
+        "Continent": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          118.7969,
+          32.0603
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Wuhan",
+        "Country": "China",
+        "Population": "8,176,000",
+        "Continent": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.3054,
+          30.5928
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Kuala Lumpur",
+        "Country": "Malaysia",
+        "Population": "7,564,000",
+        "Continent": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.6869,
+          3.139
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Xi'an",
+        "Country": "China",
+        "Population": "7,444,000",
+        "Continent": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.9398,
+          34.3416
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Hong Kong",
+        "Country": "Hong Kong",
+        "Population": "7,429,000",
+        "Continent": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.1694,
+          22.3193
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Dongguan",
+        "Country": "China",
+        "Population": "7,360,000",
+        "Continent": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.7518,
+          23.0207
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Hangzhou",
+        "Country": "China",
+        "Population": "7,236,000",
+        "Continent": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.1551,
+          30.2741
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Foshan",
+        "Country": "China",
+        "Population": "7,236,000",
+        "Continent": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.1214,
+          23.0215
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Shenyang",
+        "Country": "China",
+        "Population": "6,921,000",
+        "Continent": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.4315,
+          41.8057
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Suzhou",
+        "Country": "China",
+        "Population": "6,339,000",
+        "Continent": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.5853,
+          31.2989
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Harbin",
+        "Country": "China",
+        "Population": "6,115,000",
+        "Continent": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.6424,
+          45.756
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Singapore",
+        "Country": "Singapore",
+        "Population": "5,792,000",
+        "Continent": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8198,
+          1.3521
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Fukuoka",
+        "Country": "Japan",
+        "Population": "5,551,000",
+        "Continent": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          130.4017,
+          33.5902
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Qingdao",
+        "Country": "China",
+        "Population": "5,381,000",
+        "Continent": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.3826,
+          36.0671
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Dalian",
+        "Country": "China",
+        "Population": "5,300,000",
+        "Continent": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.6147,
+          38.914
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Yangon",
+        "Country": "Myanmar",
+        "Population": "5,157,000",
+        "Continent": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          96.1735,
+          16.8409
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Jinan",
+        "Country": "China",
+        "Population": "5,052,000",
+        "Continent": "Asia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          117.1201,
+          36.6512
+        ]
+      }
+    }
+  ]
+}
