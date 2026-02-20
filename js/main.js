@@ -36,8 +36,8 @@ function getData(map){
                 fillOpacity: 0.8
             };
 
-            //create a Leaflet GeoJSON layer and add it to the map
-            L.geoJson(json, {
+            //create a Leaflet GeoJSON layer and add it to the map. Added a variable for the zoom to
+            var geojsonLayer =L.geoJson(json, {
                 pointToLayer: function (feature, latlng){
                     return L.circleMarker(latlng, geojsonMarkerOptions);
                 }
