@@ -4,10 +4,22 @@
     {
       "type": "Feature",
       "properties": {
+        "0": 0,
+        "600": 0,
+        "1000": 0,
+        "1300": 17500,
+        "1500": 52500,
+        "1700": 641428,
+        "1800": 717900,
+        "1850": 768416,
+        "1900": 1574356,
+        "1950": 9882266,
+        "2000": 31510353,
         "City": "Tokyo",
         "Country": "Japan",
-        "Population": "37,468,000",
-        "Continent": "Asia"
+        "Continent": "Asia",
+        "-500": 0,
+        "Current": 37468000
       },
       "geometry": {
         "type": "Point",
@@ -20,10 +32,22 @@
     {
       "type": "Feature",
       "properties": {
+        "0": 0,
+        "600": 0,
+        "1000": 0,
+        "1300": 0,
+        "1500": 0,
+        "1700": 33895,
+        "1800": 52800,
+        "1850": 62500,
+        "1900": 139700,
+        "1950": 1890480,
+        "2000": 13623600,
         "City": "Jakarta",
         "Country": "Indonesia",
-        "Population": "33,517,000",
-        "Continent": "Asia"
+        "Continent": "Asia",
+        "-500": 0,
+        "Current": 33517000
       },
       "geometry": {
         "type": "Point",
@@ -36,10 +60,22 @@
     {
       "type": "Feature",
       "properties": {
+        "0": 0,
+        "600": 0,
+        "1000": 0,
+        "1300": 0,
+        "1500": 27500,
+        "1700": 27501,
+        "1800": 53000,
+        "1850": 83000,
+        "1900": 247400,
+        "1950": 1250500,
+        "2000": 6308600,
         "City": "Chongqing",
         "Country": "China",
-        "Population": "32,838,000",
-        "Continent": "Asia"
+        "Continent": "Asia",
+        "-500": 0,
+        "Current": 32838000
       },
       "geometry": {
         "type": "Point",
@@ -52,10 +88,22 @@
     {
       "type": "Feature",
       "properties": {
+        "0": 0,
+        "600": 0,
+        "1000": 0,
+        "1300": 0,
+        "1500": 0,
+        "1700": 45000,
+        "1800": 93333,
+        "1850": 155000,
+        "1900": 505511,
+        "1950": 5406000,
+        "2000": 11901111,
         "City": "Shanghai",
         "Country": "China",
-        "Population": "29,867,900",
-        "Continent": "Asia"
+        "Continent": "Asia",
+        "-500": 0,
+        "Current": 29867900
       },
       "geometry": {
         "type": "Point",
@@ -68,10 +116,22 @@
     {
       "type": "Feature",
       "properties": {
+        "0": 0,
+        "600": 94083,
+        "1000": 43000,
+        "1300": 148333,
+        "1500": 157142,
+        "1700": 194444,
+        "1800": 800000,
+        "1850": 884615,
+        "1900": 720000,
+        "1950": 1501750,
+        "2000": 9257000,
         "City": "Guangzhou",
         "Country": "China",
-        "Population": "26,638,000",
-        "Continent": "Asia"
+        "Continent": "Asia",
+        "-500": 0,
+        "Current": 26638000
       },
       "geometry": {
         "type": "Point",
@@ -84,10 +144,22 @@
     {
       "type": "Feature",
       "properties": {
+        "0": 0,
+        "600": 0,
+        "1000": 0,
+        "1300": 20000,
+        "1500": 33333,
+        "1700": 46666,
+        "1800": 77000,
+        "1850": 101600,
+        "1900": 165000,
+        "1950": 2025000,
+        "2000": 12898000,
         "City": "Manila",
         "Country": "Philippines",
-        "Population": "25,482,000",
-        "Continent": "Asia"
+        "Continent": "Asia",
+        "-500": 0,
+        "Current": 25482000
       },
       "geometry": {
         "type": "Point",
@@ -100,10 +172,22 @@
     {
       "type": "Feature",
       "properties": {
+        "0": 0,
+        "600": 0,
+        "1000": 0,
+        "1300": 0,
+        "1500": 125000,
+        "1700": 161000,
+        "1800": 216400,
+        "1850": 185714,
+        "1900": 195666,
+        "1950": 2860333,
+        "2000": 12732428,
         "City": "Seoul",
         "Country": "South Korea",
-        "Population": "24,963,000",
-        "Continent": "Asia"
+        "Continent": "Asia",
+        "-500": 0,
+        "Current": 24963000
       },
       "geometry": {
         "type": "Point",
@@ -116,10 +200,22 @@
     {
       "type": "Feature",
       "properties": {
+        "0": 32083,
+        "600": 79500,
+        "1000": 50000,
+        "1300": 463571,
+        "1500": 690400,
+        "1700": 605714,
+        "1800": 1090000,
+        "1850": 1552461,
+        "1900": 1027612,
+        "1950": 2425000,
+        "2000": 10264333,
         "City": "Beijing",
         "Country": "China",
-        "Population": "22,189,100",
-        "Continent": "Asia"
+        "Continent": "Asia",
+        "-500": 16041,
+        "Current": 22189100
       },
       "geometry": {
         "type": "Point",
@@ -132,10 +228,22 @@
     {
       "type": "Feature",
       "properties": {
+        "0": 160268,
+        "600": 70574,
+        "1000": 63333,
+        "1300": 54000,
+        "1500": 80000,
+        "1700": 50000,
+        "1800": 97000,
+        "1850": 178571,
+        "1900": 284000,
+        "1950": 586333,
+        "2000": 4689400,
         "City": "Chengdu",
         "Country": "China",
-        "Population": "20,813,000",
-        "Continent": "Asia"
+        "Continent": "Asia",
+        "-500": 0,
+        "Current": 20813000
       },
       "geometry": {
         "type": "Point",
@@ -148,10 +256,22 @@
     {
       "type": "Feature",
       "properties": {
+        "0": 0,
+        "600": 4636,
+        "1000": 13909,
+        "1300": 20863,
+        "1500": 90500,
+        "1700": 372461,
+        "1800": 384875,
+        "1850": 332857,
+        "1900": 746120,
+        "1950": 4675222,
+        "2000": 15385300,
         "City": "Osaka",
         "Country": "Japan",
-        "Population": "19,281,000",
-        "Continent": "Asia"
+        "Continent": "Asia",
+        "-500": 0,
+        "Current": 19281000
       },
       "geometry": {
         "type": "Point",
@@ -164,26 +284,22 @@
     {
       "type": "Feature",
       "properties": {
-        "City": "Shenzhen",
-        "Country": "China",
-        "Population": "16,808,000",
-        "Continent": "Asia"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          114.0579,
-          22.5431
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
+        "0": 0,
+        "600": 0,
+        "1000": 0,
+        "1300": 0,
+        "1500": 0,
+        "1700": 0,
+        "1800": 35500,
+        "1850": 50000,
+        "1900": 135000,
+        "1950": 1359666,
+        "2000": 5890200,
         "City": "Ho Chi Minh City",
         "Country": "Vietnam",
-        "Population": "15,145,000",
-        "Continent": "Asia"
+        "Continent": "Asia",
+        "-500": 0,
+        "Current": 15145000
       },
       "geometry": {
         "type": "Point",
@@ -196,10 +312,22 @@
     {
       "type": "Feature",
       "properties": {
+        "0": 0,
+        "600": 0,
+        "1000": 0,
+        "1300": 0,
+        "1500": 30500,
+        "1700": 70000,
+        "1800": 130000,
+        "1850": 177857,
+        "1900": 601500,
+        "1950": 2020250,
+        "2000": 6770500,
         "City": "Tianjin",
         "Country": "China",
-        "Population": "13,215,000",
-        "Continent": "Asia"
+        "Continent": "Asia",
+        "-500": 0,
+        "Current": 13215000
       },
       "geometry": {
         "type": "Point",
@@ -212,10 +340,22 @@
     {
       "type": "Feature",
       "properties": {
+        "0": 0,
+        "600": 0,
+        "1000": 0,
+        "1300": 0,
+        "1500": 0,
+        "1700": 0,
+        "1800": 45000,
+        "1850": 133666,
+        "1900": 294250,
+        "1950": 1491666,
+        "2000": 5958400,
         "City": "Bangkok",
         "Country": "Thailand",
-        "Population": "10,156,000",
-        "Continent": "Asia"
+        "Continent": "Asia",
+        "-500": 0,
+        "Current": 10156000
       },
       "geometry": {
         "type": "Point",
@@ -228,26 +368,22 @@
     {
       "type": "Feature",
       "properties": {
-        "City": "Nagoya",
-        "Country": "Japan",
-        "Population": "9,507,000",
-        "Continent": "Asia"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          136.9066,
-          35.1815
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
+        "0": 51000,
+        "600": 160000,
+        "1000": 73000,
+        "1300": 113000,
+        "1500": 148000,
+        "1700": 154428,
+        "1800": 50000,
+        "1850": 50000,
+        "1900": 329000,
+        "1950": 1161250,
+        "2000": 3991600,
         "City": "Nanjing",
         "Country": "China",
-        "Population": "8,245,000",
-        "Continent": "Asia"
+        "Continent": "Asia",
+        "-500": 0,
+        "Current": 8245000
       },
       "geometry": {
         "type": "Point",
@@ -260,10 +396,22 @@
     {
       "type": "Feature",
       "properties": {
+        "0": 0,
+        "600": 70000,
+        "1000": 67875,
+        "1300": 82666,
+        "1500": 64250,
+        "1700": 99285,
+        "1800": 156666,
+        "1850": 178571,
+        "1900": 1546333,
+        "1950": 2526000,
+        "2000": 5456800,
         "City": "Wuhan",
         "Country": "China",
-        "Population": "8,176,000",
-        "Continent": "Asia"
+        "Continent": "Asia",
+        "-500": 0,
+        "Current": 8176000
       },
       "geometry": {
         "type": "Point",
@@ -276,10 +424,22 @@
     {
       "type": "Feature",
       "properties": {
+        "0": 0,
+        "600": 0,
+        "1000": 0,
+        "1300": 0,
+        "1500": 0,
+        "1700": 0,
+        "1800": 0,
+        "1850": 0,
+        "1900": 47000,
+        "1950": 2173333,
+        "2000": 4299666,
         "City": "Kuala Lumpur",
         "Country": "Malaysia",
-        "Population": "7,564,000",
-        "Continent": "Asia"
+        "Continent": "Asia",
+        "-500": 0,
+        "Current": 7564000
       },
       "geometry": {
         "type": "Point",
@@ -292,10 +452,22 @@
     {
       "type": "Feature",
       "properties": {
+        "0": 567000,
+        "600": 324375,
+        "1000": 260000,
+        "1300": 113500,
+        "1500": 125250,
+        "1700": 161166,
+        "1800": 221200,
+        "1850": 268142,
+        "1900": 250250,
+        "1950": 437333,
+        "2000": 3930200,
         "City": "Xi'an",
         "Country": "China",
-        "Population": "7,444,000",
-        "Continent": "Asia"
+        "Continent": "Asia",
+        "-500": 135000,
+        "Current": 7444000
       },
       "geometry": {
         "type": "Point",
@@ -308,10 +480,22 @@
     {
       "type": "Feature",
       "properties": {
+        "0": 0,
+        "600": 0,
+        "1000": 0,
+        "1300": 0,
+        "1500": 0,
+        "1700": 0,
+        "1800": 0,
+        "1850": 66500,
+        "1900": 192000,
+        "1950": 2112500,
+        "2000": 5801000,
         "City": "Hong Kong",
         "Country": "Hong Kong",
-        "Population": "7,429,000",
-        "Continent": "Asia"
+        "Continent": "Asia",
+        "-500": 0,
+        "Current": 7429000
       },
       "geometry": {
         "type": "Point",
@@ -324,26 +508,22 @@
     {
       "type": "Feature",
       "properties": {
-        "City": "Dongguan",
-        "Country": "China",
-        "Population": "7,360,000",
-        "Continent": "Asia"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          113.7518,
-          23.0207
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
+        "0": 0,
+        "600": 60000,
+        "1000": 80000,
+        "1300": 538222,
+        "1500": 250000,
+        "1700": 297727,
+        "1800": 383625,
+        "1850": 426800,
+        "1900": 348800,
+        "1950": 489000,
+        "2000": 4301800,
         "City": "Hangzhou",
         "Country": "China",
-        "Population": "7,236,000",
-        "Continent": "Asia"
+        "Continent": "Asia",
+        "-500": 0,
+        "Current": 7236000
       },
       "geometry": {
         "type": "Point",
@@ -356,26 +536,22 @@
     {
       "type": "Feature",
       "properties": {
-        "City": "Foshan",
-        "Country": "China",
-        "Population": "7,236,000",
-        "Continent": "Asia"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          113.1214,
-          23.0215
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
+        "0": 0,
+        "600": 0,
+        "1000": 0,
+        "1300": 0,
+        "1500": 27500,
+        "1700": 65000,
+        "1800": 30000,
+        "1850": 30000,
+        "1900": 162666,
+        "1950": 1082750,
+        "2000": 4839800,
         "City": "Shenyang",
         "Country": "China",
-        "Population": "6,921,000",
-        "Continent": "Asia"
+        "Continent": "Asia",
+        "-500": 0,
+        "Current": 6921000
       },
       "geometry": {
         "type": "Point",
@@ -388,10 +564,22 @@
     {
       "type": "Feature",
       "properties": {
+        "0": 65000,
+        "600": 95000,
+        "1000": 86333,
+        "1300": 86333,
+        "1500": 121750,
+        "1700": 136666,
+        "1800": 238000,
+        "1850": 318000,
+        "1900": 357500,
+        "1950": 414000,
+        "2000": 2245575,
         "City": "Suzhou",
         "Country": "China",
-        "Population": "6,339,000",
-        "Continent": "Asia"
+        "Continent": "Asia",
+        "-500": 63333,
+        "Current": 6339000
       },
       "geometry": {
         "type": "Point",
@@ -404,26 +592,22 @@
     {
       "type": "Feature",
       "properties": {
-        "City": "Harbin",
-        "Country": "China",
-        "Population": "6,115,000",
-        "Continent": "Asia"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          126.6424,
-          45.756
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
+        "0": 0,
+        "600": 0,
+        "1000": 0,
+        "1300": 0,
+        "1500": 0,
+        "1700": 0,
+        "1800": 0,
+        "1850": 62500,
+        "1900": 193000,
+        "1950": 1150000,
+        "2000": 4326750,
         "City": "Singapore",
         "Country": "Singapore",
-        "Population": "5,792,000",
-        "Continent": "Asia"
+        "Continent": "Asia",
+        "-500": 0,
+        "Current": 5792000
       },
       "geometry": {
         "type": "Point",
@@ -436,10 +620,22 @@
     {
       "type": "Feature",
       "properties": {
+        "0": 0,
+        "600": 0,
+        "1000": 57,
+        "1300": 100,
+        "1500": 30000,
+        "1700": 45000,
+        "1800": 40000,
+        "1850": 42000,
+        "1900": 66600,
+        "1950": 398050,
+        "2000": 2134666,
         "City": "Fukuoka",
         "Country": "Japan",
-        "Population": "5,551,000",
-        "Continent": "Asia"
+        "Continent": "Asia",
+        "-500": 0,
+        "Current": 5551000
       },
       "geometry": {
         "type": "Point",
@@ -452,42 +648,22 @@
     {
       "type": "Feature",
       "properties": {
-        "City": "Qingdao",
-        "Country": "China",
-        "Population": "5,381,000",
-        "Continent": "Asia"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          120.3826,
-          36.0671
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "City": "Dalian",
-        "Country": "China",
-        "Population": "5,300,000",
-        "Continent": "Asia"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          121.6147,
-          38.914
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
+        "0": 0,
+        "600": 0,
+        "1000": 0,
+        "1300": 0,
+        "1500": 0,
+        "1700": 0,
+        "1800": 30000,
+        "1850": 62500,
+        "1900": 229000,
+        "1950": 1075333,
+        "2000": 4063600,
         "City": "Yangon",
         "Country": "Myanmar",
-        "Population": "5,157,000",
-        "Continent": "Asia"
+        "Continent": "Asia",
+        "-500": 0,
+        "Current": 5157000
       },
       "geometry": {
         "type": "Point",
@@ -500,10 +676,22 @@
     {
       "type": "Feature",
       "properties": {
+        "0": 0,
+        "600": 0,
+        "1000": 0,
+        "1300": 0,
+        "1500": 39500,
+        "1700": 55000,
+        "1800": 65000,
+        "1850": 70000,
+        "1900": 145000,
+        "1950": 517000,
+        "2000": 2628000,
         "City": "Jinan",
         "Country": "China",
-        "Population": "5,052,000",
-        "Continent": "Asia"
+        "Continent": "Asia",
+        "-500": 0,
+        "Current": 5052000
       },
       "geometry": {
         "type": "Point",

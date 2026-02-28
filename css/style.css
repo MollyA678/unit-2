@@ -1,4 +1,19 @@
 #map { 
     height: 400px;
-    width: 100%;
+    width: 400px;
  }
+
+ .sequence-control-container {
+    background: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.range-slider {
+    width: 200px;
+    margin: 0 10px;
+}
+
+.step {
+    cursor: pointer;
+}
