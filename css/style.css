@@ -1,8 +1,9 @@
+/* CSS */
 #map { 
-    height: 400px;
-    width: 400px;
+    height: 600px;
+    width: 600px;
  }
-
+/* ook of the sequence control  */
  .sequence-control-container {
     background: white;
     padding: 10px;
@@ -16,4 +17,26 @@
 
 .step {
     cursor: pointer;
+}
+
+/* Popup styling */
+.leaflet-popup-content-wrapper {
+    border-radius: 50%;
+    font-family: "Times New Roman", Times, serif;
+    text-align: center;
+    padding: 20px;
+}
+
+.leaflet-popup-content {
+    margin: 0;
+    min-width: 140px;
+    min-height: 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Shadow? */
+.leaflet-popup-content-wrapper {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
 }

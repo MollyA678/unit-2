@@ -1,6 +1,7 @@
 
 //declare map variable globally so all functions have access
 var map;
+// New variables
 var timestamps = [
     "-500","0","600","1000","1300","1500",
     "1700","1800","1850","1900","1950","2000","Current"
@@ -27,12 +28,14 @@ function createMap(){
     getData(map);
 };
 
+// To scale the proportional symbols reasonably
 function calcPropRadius(attValue){
-    var scaleFactor = 0.00004; // tweak this
+    var scaleFactor = 0.00005;
     var area = attValue * scaleFactor;
     return Math.sqrt(area / Math.PI);
 }
 
+// Updating the proportional symbol radius to the input
 function updatePropSymbols(timestamp){
     geojsonLayer.eachLayer(function(layer){
         var props = layer.feature.properties;
@@ -42,7 +45,7 @@ function updatePropSymbols(timestamp){
 
         var radius = calcPropRadius(value);
         layer.setRadius(radius);
-
+       // New spot for popup
         var popupContent =
             "<p><b>City:</b> " + props.City + "</p>" +
             "<p><b>Year:</b> " + timestamp + "</p>" +
@@ -52,6 +55,7 @@ function updatePropSymbols(timestamp){
     });
 }
 
+// Creating the sequence controls
 function createSequenceControls(){
     var SequenceControl = L.Control.extend({
         options: {
@@ -61,13 +65,13 @@ function createSequenceControls(){
         onAdd: function () {
             var container = L.DomUtil.create('div', 'sequence-control-container');
 
-            // previous button
+            // Previous button
             container.innerHTML += '<button class="step" id="reverse">⟵</button>';
 
-            // slider
+            // Slider
             container.innerHTML += '<input class="range-slider" type="range">';
 
-            // next button
+            // Next button
             container.innerHTML += '<button class="step" id="forward">⟶</button>';
 
             L.DomEvent.disableClickPropagation(container);
@@ -77,23 +81,23 @@ function createSequenceControls(){
 
     map.addControl(new SequenceControl());
 
-    // slider settings
+    // Slider settings
     document.querySelector(".range-slider").max = timestamps.length - 1;
     document.querySelector(".range-slider").min = 0;
     document.querySelector(".range-slider").step = 1;
     document.querySelector(".range-slider").value = currentIndex;
 
-    // slider input
+    // Slider input
     document.querySelector(".range-slider").addEventListener('input', function(){
         currentIndex = Number(this.value);
         updatePropSymbols(timestamps[currentIndex]);
     });
 
-    // button clicks with looping
+    // Figuring out the wrap around
     document.querySelector("#forward").addEventListener("click", function(){
         currentIndex++;
         if (currentIndex > timestamps.length - 1) {
-            currentIndex = 0; // loop to start
+            currentIndex = 0; // Loop to start
         }
         document.querySelector(".range-slider").value = currentIndex;
         updatePropSymbols(timestamps[currentIndex]);
@@ -102,19 +106,20 @@ function createSequenceControls(){
     document.querySelector("#reverse").addEventListener("click", function(){
         currentIndex--;
         if (currentIndex < 0) {
-            currentIndex = timestamps.length - 1; // loop to end
+            currentIndex = timestamps.length - 1; // Loop to end
         }
         document.querySelector(".range-slider").value = currentIndex;
         updatePropSymbols(timestamps[currentIndex]);
     });
 }
 
-//function to retrieve the data and place it on the map
+// Function to retrieve the data and place it on the map
 function getData(map){
     fetch("./data/population_cities.geojson")
 		.then(function(response){
 			return response.json();
 		})
+        //Changing this function slightly so the symbols change
 		.then(function(json){
 
             geojsonLayer = L.geoJson(json, {
@@ -132,29 +137,12 @@ function getData(map){
 
             //Made the geojsonLayer variable global
             
-            //Making it so the properties show up when you hover
-            onEachFeature: function(feature, layer){
-    
-                var popupContent = 
-                "<p><b>City:</b> " + feature.properties.City + "</p>" +
-                "<p><b>Country:</b> " + feature.properties.Country + "</p>";
-
-                layer.bindPopup(popupContent);
-
-                layer.on({
-                    mouseover: function (e) {
-                        this.openPopup();
-                    },
-                    mouseout: function (e) {
-                        this.closePopup();
-                    }
-                });
-            }
+            //Moved the popup up to a seperate function
 
             }).addTo(map);
             //Trying to get map to zoom right to the data. 
             map.fitBounds(geojsonLayer.getBounds());
-
+            //Calling the sequence controls and making sure the symbols match input
             createSequenceControls();
             updatePropSymbols(timestamps[currentIndex]);
         });
