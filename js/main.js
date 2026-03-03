@@ -14,10 +14,17 @@ var geojsonLayer;
 function createMap(){
 
     //create the map
-    map = L.map('map', {
-        center: [0, 0],
-        zoom: 2
-    });
+   map = L.map('map', {
+    center: [25, 105],   // centered roughly on East Asia
+    zoom: 4,
+    minZoom: 3,
+    maxZoom: 7,
+    maxBounds: [
+        [-20, 60],   // southwest corner
+        [60, 150]    // northeast corner
+    ],
+    maxBoundsViscosity: 1.0
+});
 
     //add OSM base tilelayer
     L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -30,7 +37,7 @@ function createMap(){
 
 // To scale the proportional symbols reasonably
 function calcPropRadius(attValue){
-    var scaleFactor = 0.00005;
+    var scaleFactor = 0.0002;
     var area = attValue * scaleFactor;
     return Math.sqrt(area / Math.PI);
 }
@@ -126,10 +133,10 @@ function getData(map){
 
             pointToLayer: function (feature, latlng){
                 return L.circleMarker(latlng, {
-                radius: 15,
+                radius: 8,
                 fillColor: "#ff7800",
                 color: "#000",
-                weight: 1.5,
+                weight: 1,
                 opacity: 1,
                 fillOpacity: 0.8
             });
