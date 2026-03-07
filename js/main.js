@@ -178,22 +178,12 @@ function createCitySearch(){
                 geojsonLayer.eachLayer(function(layer){
 
                     if(layer.feature.properties.City === selectedCity){
-                        //make sure popup exists?
-                        var timestamp = timestamps[currentIndex];
-                        var props = layer.feature.properties;
-                        var value = Number(props[timestamp]) || 0;
-                            if (value > 0) {
-                                var population = value.toLocaleString();
-                                var popupContent =
-                                    "<p><b>City:</b> " + props.City + "</p>" +
-                                    "<p><b>Population:</b> " + population + "</p>";
-                                layer.bindPopup(popupContent, {autoClose: false, closeOnClick: false});
-                            }
+
                         // zoom to
                         map.setView(layer.getLatLng(),6, {animate: false});
                         
                         // open popup
-                            layer.openPopup();
+                            layer.popupMarker.openPopup();
                     }
 
                 });
@@ -302,7 +292,25 @@ function getData(map){
                 fillOpacity: 0.8
             });
         },
+        // Creating a 'dummy marker' or something because leaflet doesn't like doing the popup on search
+        geojsonLayer.eachLayer(function(layer){
 
+        var props = layer.feature.properties;
+        var latlng = layer.getLatLng();
+
+    
+        var popupMarker = L.marker(latlng, {opacity: 0}).addTo(map);
+        var population = Number(props[timestamps[currentIndex]]).toLocaleString();
+        var popupContent =
+         "<p><b>City:</b> " + props.City + "</p>" +
+         "<p><b>Population:</b> " + population + "</p>";
+
+            popupMarker.bindPopup(popupContent);
+
+            // Store reference in layer for easy access
+            layer.popupMarker = popupMarker;
+        });
+        
             //Made the geojsonLayer variable global
             
             //Moved the popup up to a seperate function
