@@ -56,6 +56,7 @@ function updatePropSymbols(timestamp){
 
         var radius = calcPropRadius(value);
         layer.setRadius(radius);
+
        // New spot for popup. Moved year from popup to slider
        var population = Number(props[timestamp]).toLocaleString(); 
        var popupContent =
@@ -63,6 +64,11 @@ function updatePropSymbols(timestamp){
             "<p><b>Population:</b> " + population + "</p>";
 
         layer.bindPopup(popupContent);
+        
+       // and the other marker
+        if (layer.popupMarker) {
+            layer.popupMarker.setPopupContent(popupContent);
+        }
     });
 }
 
