@@ -43,7 +43,7 @@ function calcPropRadius(attValue){
 }
 
 // Updating the proportional symbol radius to the input
-function updatePropSymbols(timestamp){
+function updatePropSymbols(timestamp) {
     geojsonLayer.eachLayer(function(layer){
         var props = layer.feature.properties;
         var value = Number(props[timestamp]);
