@@ -180,8 +180,10 @@ function createCitySearch(){
                     if(layer.feature.properties.City === selectedCity){
                         // zoom to
                         map.setView(layer.getLatLng(),6);
-                        // open popup
-                        layer.openPopup();
+                        // open popup after
+                        setTimeout(function(){
+                            layer.openPopup();
+                        }, 300);
 
                     }
 
