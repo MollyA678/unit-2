@@ -13,7 +13,7 @@ var geojsonLayer;
 //function to instantiate the Leaflet map
 function createMap(){
 
-    //create the map
+    //create the map and add a pan/zoom extent
    map = L.map('map', {
     center: [25, 105],   // centered roughly on East Asia
     zoom: 4,
@@ -35,11 +35,12 @@ function createMap(){
     getData(map);
 };
 
-// To scale the proportional symbols reasonably
+// To scale the proportional symbols reasonably. Added flannerys
 function calcPropRadius(attValue){
-    var scaleFactor = 0.0002;
-    var area = attValue * scaleFactor;
-    return Math.sqrt(area / Math.PI);
+    var minRadius = 5;
+    var scaleFactor = 0.5;
+    var radius = scaleFactor * Math.pow(attValue, 0.5715);
+    return radius + minRadius;
 }
 
 // Updating the proportional symbol radius to the input
@@ -52,11 +53,10 @@ function updatePropSymbols(timestamp){
 
         var radius = calcPropRadius(value);
         layer.setRadius(radius);
-       // New spot for popup
+       // New spot for popup. Moved year from popup to slider
         var popupContent =
             "<p><b>City:</b> " + props.City + "</p>" +
-            "<p><b>Year:</b> " + timestamp + "</p>" +
-            "<p><b>Population:</b> " + value.toLocaleString() + "</p>";
+            "<p><b>Year:</b> " + timestamp + "</p>";
 
         layer.bindPopup(popupContent);
     });
@@ -71,6 +71,9 @@ function createSequenceControls(){
 
         onAdd: function () {
             var container = L.DomUtil.create('div', 'sequence-control-container');
+
+            // Labeling the slider
+            container.innerHTML += '<div class="year-label" id="yearLabel"></div>';
 
             // Previous button
             container.innerHTML += '<button class="step" id="reverse">⟵</button>';
@@ -88,17 +91,25 @@ function createSequenceControls(){
 
     map.addControl(new SequenceControl());
 
-    // Slider settings
-    document.querySelector(".range-slider").max = timestamps.length - 1;
-    document.querySelector(".range-slider").min = 0;
-    document.querySelector(".range-slider").step = 1;
-    document.querySelector(".range-slider").value = currentIndex;
+    var slider = document.querySelector(".range-slider");
+    var yearLabel = document.querySelector("#yearLabel");
+    yearLabel.innerHTML = timestamps[currentIndex];
 
-    // Slider input
-    document.querySelector(".range-slider").addEventListener('input', function(){
+    // Slider settings
+    slider.max = timestamps.length - 1;
+    slider.min = 0;
+    slider.step = 1;
+    slider.value = currentIndex;
+
+    yearLabel.innerHTML = timestamps[currentIndex];
+
+    // Slider input.
+    slider.addEventListener("input", function(){
         currentIndex = Number(this.value);
+        yearLabel.innerHTML = timestamps[currentIndex];
         updatePropSymbols(timestamps[currentIndex]);
     });
+
 
     // Figuring out the wrap around
     document.querySelector("#forward").addEventListener("click", function(){
@@ -106,16 +117,19 @@ function createSequenceControls(){
         if (currentIndex > timestamps.length - 1) {
             currentIndex = 0; // Loop to start
         }
-        document.querySelector(".range-slider").value = currentIndex;
+        slider.value = currentIndex;
+        yearLabel.innerHTML = timestamps[currentIndex];
         updatePropSymbols(timestamps[currentIndex]);
     });
 
+    // reverse slider
     document.querySelector("#reverse").addEventListener("click", function(){
         currentIndex--;
         if (currentIndex < 0) {
             currentIndex = timestamps.length - 1; // Loop to end
         }
-        document.querySelector(".range-slider").value = currentIndex;
+        slider.value = currentIndex;
+        yearLabel.innerHTML = timestamps[currentIndex];
         updatePropSymbols(timestamps[currentIndex]);
     });
 }
