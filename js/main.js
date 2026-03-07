@@ -68,7 +68,7 @@ function updatePropSymbols(timestamp){
     });
 }
 
-// Creating dynamic legend
+// Calculating max for legend
 function getMaxValue(){
 
     var max = 0;
@@ -87,6 +87,17 @@ function getMaxValue(){
 
     return max;
 }
+
+// Rounding the legend numbers
+function roundLegendMax(value){
+
+    var magnitude = Math.pow(10, Math.floor(Math.log10(value)));
+    var rounded = Math.ceil(value / magnitude) * magnitude;
+
+    return rounded;
+}
+
+// Creating the dynamic legend
 function createLegend(){
 
     var LegendControl = L.Control.extend({
@@ -98,7 +109,7 @@ function createLegend(){
 
             var container = L.DomUtil.create('div','legend-control-container');
 
-            var max = getMaxValue();
+            var max = roundLegendMax(getMaxValue());
 
             var values = [max, max / 2, max / 4];
 
@@ -116,7 +127,7 @@ function createLegend(){
                     '" r="' + radius +
                     '" fill="#ff7800" fill-opacity="0.8" stroke="#000"/>' +
                     '</svg> ' +
-                    Math.round(value).toLocaleString() +
+                    value.toLocaleString() +
                     '</div>';
             });
 
