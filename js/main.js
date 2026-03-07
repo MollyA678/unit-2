@@ -178,6 +178,13 @@ function createCitySearch(){
                 geojsonLayer.eachLayer(function(layer){
 
                     if(layer.feature.properties.City === selectedCity){
+                        // Update the popup content for the current slider year
+                        var props = layer.feature.properties;
+                        var population = Number(props[timestamps[currentIndex]]).toLocaleString();
+                        layer.popupMarker.setPopupContent(
+                            `<p><b>City:</b> ${props.City}</p>
+                             <p><b>Population:</b> ${population}</p>`
+                        );
 
                         // zoom to
                         map.setView(layer.getLatLng(),6, {animate: false});
@@ -293,6 +300,7 @@ function getData(map){
             });
         }
       }).addTo(map);
+
         // Creating a 'dummy marker' or something because leaflet doesn't like doing the popup on search
         geojsonLayer.eachLayer(function(layer){
 
@@ -302,11 +310,11 @@ function getData(map){
     
         var popupMarker = L.marker(latlng, {opacity: 0}).addTo(map);
         var population = Number(props[timestamps[currentIndex]]).toLocaleString();
-        var popupContent =
+        popupMarker.bindPopup(
          "<p><b>City:</b> " + props.City + "</p>" +
-         "<p><b>Population:</b> " + population + "</p>";
+         "<p><b>Population:</b> " + population + "</p>"
 
-            popupMarker.bindPopup(popupContent);
+            );
 
             // Store reference in layer for easy access
             layer.popupMarker = popupMarker;
