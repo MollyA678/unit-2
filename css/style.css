@@ -3,7 +3,7 @@
     height: 650px;
     width: 650px;
  }
-/* ook of the sequence control  */
+/* look of the sequence control  */
  .sequence-control-container {
     background: white;
     padding: 10px;
@@ -17,6 +17,14 @@
 
 .step {
     cursor: pointer;
+}
+
+.year-label {
+    font-family: "Times New Roman", serif;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 4px;
 }
 
 /* Popup styling */
@@ -44,17 +52,15 @@
 /* Legend styling */
 .legend-control-container {
     background: white;
-    padding: 10px;
-    border-radius: 6px;
+    padding: 12px;
+    border-radius: 8px;
     font-family: "Times New Roman", serif;
     text-align: center;
-    box-shadow: 0 0 6px rgba(0,0,0,0.3);
+    box-shadow: 0 0 8px rgba(0,0,0,0.3);
 }
 
 .legend-circle {
     display: flex;
-    border-radius: 50%;
-    background: rgba(255, 0, 0, 0.6);
     margin-bottom: 5px;
     position: relative;
     align-items: center;
@@ -63,3 +69,4 @@
 .legend-circle svg{
     margin-right: 8px;
 }
+
