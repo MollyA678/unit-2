@@ -67,6 +67,65 @@ function updatePropSymbols(timestamp){
     });
 }
 
+// Creating dynamic legend
+function getMaxValue(){
+
+    var max = 0;
+
+    geojsonLayer.eachLayer(function(layer){
+        var props = layer.feature.properties;
+
+        timestamps.forEach(function(year){
+            var value = Number(props[year]);
+
+            if (value > max){
+                max = value;
+            }
+        });
+    });
+
+    return max;
+}
+function createLegend(){
+
+    var LegendControl = L.Control.extend({
+        options: {
+            position: 'bottomright'
+        },
+
+        onAdd: function () {
+
+            var container = L.DomUtil.create('div','legend-control-container');
+
+            var max = getMaxValue();
+
+            var values = [max, max / 2, max / 4];
+
+            container.innerHTML += "<b>Population</b><br>";
+
+            values.reverse().forEach(function(value){
+
+                var radius = calcPropRadius(value);
+
+                container.innerHTML +=
+                    '<div class="legend-circle">' +
+                    '<svg width="' + (radius*2) + '" height="' + (radius*2) + '">' +
+                    '<circle cx="' + radius +
+                    '" cy="' + radius +
+                    '" r="' + radius +
+                    '" fill="#ff7800" fill-opacity="0.8" stroke="#000"/>' +
+                    '</svg> ' +
+                    Math.round(value).toLocaleString() +
+                    '</div>';
+            });
+
+            return container;
+        }
+    });
+
+    map.addControl(new LegendControl());
+}
+
 // Creating the sequence controls
 function createSequenceControls(){
     var SequenceControl = L.Control.extend({
@@ -168,8 +227,9 @@ function getData(map){
             }).addTo(map);
             //Trying to get map to zoom right to the data. 
             map.fitBounds(geojsonLayer.getBounds());
-            //Calling the sequence controls and making sure the symbols match input
+            //Calling the sequence controls and legend and making sure the symbols match input
             createSequenceControls();
+            createLegend();
             updatePropSymbols(timestamps[currentIndex]);
         });
     }

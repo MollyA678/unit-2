@@ -40,3 +40,26 @@
 .leaflet-popup-content-wrapper {
     box-shadow: 0 4px 12px rgba(0,0,0,0.25);
 }
+
+/* Legend styling */
+.legend-control-container {
+    background: white;
+    padding: 10px;
+    border-radius: 6px;
+    font-family: "Times New Roman", serif;
+    text-align: center;
+    box-shadow: 0 0 6px rgba(0,0,0,0.3);
+}
+
+.legend-circle {
+    display: flex;
+    border-radius: 50%;
+    background: rgba(255, 0, 0, 0.6);
+    margin-bottom: 5px;
+    position: relative;
+    align-items: center;
+}
+
+.legend-circle svg{
+    margin-right: 8px;
+}
