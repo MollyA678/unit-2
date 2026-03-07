@@ -187,15 +187,13 @@ function createCitySearch(){
                                 var popupContent =
                                     "<p><b>City:</b> " + props.City + "</p>" +
                                     "<p><b>Population:</b> " + population + "</p>";
-                                layer.bindPopup(popupContent);
+                                layer.bindPopup(popupContent, {autoClose: false, closeOnClick: false});
                             }
                         // zoom to
-                        map.setView(layer.getLatLng(),6);
+                        map.setView(layer.getLatLng(),6, {animate: false});
                         
-                        // open popup after zoom
-                        map.once('moveend', function() {
+                        // open popup
                             layer.openPopup();
-                        });
                     }
 
                 });
