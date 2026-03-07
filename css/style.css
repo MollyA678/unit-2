@@ -70,3 +70,22 @@
     margin-right: 8px;
 }
 
+/* Search box styling */
+.leaflet-top.leaflet-left {
+    width: 100%;
+}
+
+.city-search-control {
+    background:white;
+    padding:6px;
+    border-radius:5px;
+    box-shadow:0 0 8px rgba(0,0,0,0.3);
+    position:absolute;
+    left:50%;
+    transform:translateX(-50%);
+}
+
+.city-dropdown {
+    font-family:"Times New Roman", serif;
+    font-size:14px;
+}

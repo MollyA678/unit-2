@@ -108,7 +108,7 @@ function createLegend(){
             var container = L.DomUtil.create('div','legend-control-container');
 
             var max = roundLegendMax(getMaxValue());
-
+            // Calculate the values for the legend circles
             var values = [
                 roundLegendMax(max), 
                 roundLegendMax(max / 2), 
@@ -120,7 +120,7 @@ function createLegend(){
             values.reverse().forEach(function(value){
 
                 var radius = calcPropRadius(value);
-
+                // representation circles
                 container.innerHTML +=
                     '<div class="legend-circle">' +
                     '<svg width="' + (radius*2) + '" height="' + (radius*2) + '">' +
@@ -138,6 +138,64 @@ function createLegend(){
     });
 
     map.addControl(new LegendControl());
+}
+
+// Creating a search feature dropdown
+function createCitySearch(){
+   // position
+    var SearchControl = L.Control.extend({
+
+        options: {
+            position: "topleft"
+        },
+
+        onAdd: function(){
+
+            var container = L.DomUtil.create("div","city-search-control");
+
+            var select = L.DomUtil.create("select","city-dropdown",container);
+            // default
+            select.innerHTML = "<option value=''>Select a City</option>";
+
+            geojsonLayer.eachLayer(function(layer){
+
+                var city = layer.feature.properties.City;
+
+                var option = document.createElement("option");
+                option.value = city;
+                option.text = city;
+
+                select.appendChild(option);
+
+            });
+            //prevent pan/zoom during interaction
+            L.DomEvent.disableClickPropagation(container);
+
+            select.addEventListener("change", function(){
+
+                var selectedCity = this.value;
+                // find the input city
+                geojsonLayer.eachLayer(function(layer){
+
+                    if(layer.feature.properties.City === selectedCity){
+                        // zoom to
+                        map.setView(layer.getLatLng(),6);
+                        // open popup
+                        layer.openPopup();
+
+                    }
+
+                });
+
+            });
+
+            return container;
+        }
+
+    });
+
+    map.addControl(new SearchControl());
+
 }
 
 // Creating the sequence controls
@@ -241,9 +299,10 @@ function getData(map){
             }).addTo(map);
             //Trying to get map to zoom right to the data. 
             map.fitBounds(geojsonLayer.getBounds());
-            //Calling the sequence controls and legend and making sure the symbols match input
+            //Calling the sequence controls, legend, and search and making sure the symbols match input
             createSequenceControls();
             createLegend();
+            createCitySearch();
             updatePropSymbols(timestamps[currentIndex]);
         });
     }
