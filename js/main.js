@@ -291,7 +291,8 @@ function getData(map){
                 opacity: 1,
                 fillOpacity: 0.8
             });
-        },
+        }
+      }).addTo(map);
         // Creating a 'dummy marker' or something because leaflet doesn't like doing the popup on search
         geojsonLayer.eachLayer(function(layer){
 
@@ -315,7 +316,6 @@ function getData(map){
             
             //Moved the popup up to a seperate function
 
-            }).addTo(map);
             //Trying to get map to zoom right to the data. 
             map.fitBounds(geojsonLayer.getBounds());
             //Calling the sequence controls, legend, and search and making sure the symbols match input
