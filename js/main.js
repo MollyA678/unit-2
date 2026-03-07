@@ -26,10 +26,8 @@ function createMap(){
     maxBoundsViscosity: 1.0
 });
 
-    //add OSM base tilelayer
-    L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>'
-    }).addTo(map);
+    // not adding OSM base tilelayer anymore. Found a different one on leaflet providers, which is in lib now
+    L.tileLayer.provider('CartoDB.DarkMatter').addTo(map);
 
     //call getData function
     getData(map);
