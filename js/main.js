@@ -122,7 +122,8 @@ function createLegend(){
             var values = [
                 roundLegendMax(max), 
                 roundLegendMax(max / 2), 
-                roundLegendMax(max / 4)
+                roundLegendMax(max / 4),
+                roundLegendMax(max / 10)
             ];
 
             container.innerHTML += "<b>Population</b><br>";
