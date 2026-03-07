@@ -178,14 +178,24 @@ function createCitySearch(){
                 geojsonLayer.eachLayer(function(layer){
 
                     if(layer.feature.properties.City === selectedCity){
-                     // open popup after zoom
+                        //make sure popup exists?
+                        var timestamp = timestamps[currentIndex];
+                        var props = layer.feature.properties;
+                        var value = Number(props[timestamp]) || 0;
+                            if (value > 0) {
+                                var population = value.toLocaleString();
+                                var popupContent =
+                                    "<p><b>City:</b> " + props.City + "</p>" +
+                                    "<p><b>Population:</b> " + population + "</p>";
+                                layer.bindPopup(popupContent);
+                            }
+                        // zoom to
+                        map.setView(layer.getLatLng(),6);
+                        
+                        // open popup after zoom
                         map.once('moveend', function() {
                             layer.openPopup();
                         });
-
-                        // zoom to
-                        map.setView(layer.getLatLng(),6);
-
                     }
 
                 });
