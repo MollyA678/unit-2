@@ -37,9 +37,9 @@ function createMap(){
 
 // To scale the proportional symbols reasonably. Added flannerys
 function calcPropRadius(attValue){
-    var minRadius = 5;
-    var scaleFactor = 0.5;
-    var radius = scaleFactor * Math.pow(attValue, 0.5715);
+    var minRadius = 3;
+    var scaledValue = attValue / 1000000;
+    var radius = 2.5 * Math.pow(scaledValue, 0.5715);
     return radius + minRadius;
 }
 
@@ -48,8 +48,12 @@ function updatePropSymbols(timestamp){
     geojsonLayer.eachLayer(function(layer){
         var props = layer.feature.properties;
         var value = Number(props[timestamp]);
-
-        if (!value) value = 0;
+        
+        // Making cities only show up once they have a population
+        if (!value || value <= 0){
+        layer.setRadius(0);
+        return;
+}
 
         var radius = calcPropRadius(value);
         layer.setRadius(radius);
