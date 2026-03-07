@@ -178,12 +178,13 @@ function createCitySearch(){
                 geojsonLayer.eachLayer(function(layer){
 
                     if(layer.feature.properties.City === selectedCity){
+                     // open popup after zoom
+                        map.once('moveend', function() {
+                            layer.openPopup();
+                        });
+
                         // zoom to
                         map.setView(layer.getLatLng(),6);
-                        // open popup after
-                        setTimeout(function(){
-                            layer.openPopup();
-                        }, 300);
 
                     }
 
