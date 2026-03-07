@@ -64,10 +64,14 @@ function updatePropSymbols(timestamp){
             "<p><b>Population:</b> " + population + "</p>";
 
         layer.bindPopup(popupContent);
-        
+
        // and the other marker
         if (layer.popupMarker) {
             layer.popupMarker.setPopupContent(popupContent);
+            // If popup is currently open, refresh it so user sees the new value
+            if (layer.popupMarker.isPopupOpen()){
+                layer.popupMarker.getPopup().setContent(popupContent).update();
+            }
         }
     });
 }
