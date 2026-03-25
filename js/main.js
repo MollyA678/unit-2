@@ -7,6 +7,21 @@ var timestamps = [
     "1700","1800","1850","1900","1950","2000","Current"
 ];
 
+// Making the year labels AD and BC instead of positive and negative
+function formatYearLabel(year){
+    var y = Number(year);
+
+    if (y < 0){
+        return Math.abs(y) + " BC";
+    } else if (y === 0){
+        return "0"; 
+    } else if (year === "Current"){
+        return "Current";
+    } else {
+        return y + " AD";
+    }
+}
+
 var currentIndex = 0;
 var geojsonLayer;
 
@@ -59,8 +74,11 @@ function updatePropSymbols(timestamp) {
 
        // New spot for popup. Moved year from popup to slider
        var population = Number(props[timestamp]).toLocaleString(); 
-       var popupContent =
+       var yearLabel = formatYearLabel(timestamp);
+        // Adding new year label to the popuup attributes
+        var popupContent =
             "<p><b>City:</b> " + props.City + "</p>" +
+            "<p><b>Year:</b> " + yearLabel + "</p>" +
             "<p><b>Population:</b> " + population + "</p>";
 
         layer.bindPopup(popupContent);
@@ -191,11 +209,14 @@ function createCitySearch(){
                     if(layer.feature.properties.City === selectedCity){
                         // Update the popup content for the current slider year
                         var props = layer.feature.properties;
+                        var yearLabel = formatYearLabel(timestamps[currentIndex]);
                         var population = Number(props[timestamps[currentIndex]]).toLocaleString();
+
                         layer.popupMarker.setPopupContent(
                             `<p><b>City:</b> ${props.City}</p>
+                             <p><b>Year:</b> ${yearLabel}</p>
                              <p><b>Population:</b> ${population}</p>`
-                        );
+                    );
 
                         // zoom to
                         map.setView(layer.getLatLng(),6, {animate: false});
@@ -248,7 +269,8 @@ function createSequenceControls(){
 
     var slider = document.querySelector(".range-slider");
     var yearLabel = document.querySelector("#yearLabel");
-    yearLabel.innerHTML = timestamps[currentIndex];
+    // Putting the new year labeling in slider
+    yearLabel.innerHTML = formatYearLabel(timestamps[currentIndex]);
 
     // Slider settings
     slider.max = timestamps.length - 1;
@@ -256,12 +278,10 @@ function createSequenceControls(){
     slider.step = 1;
     slider.value = currentIndex;
 
-    yearLabel.innerHTML = timestamps[currentIndex];
-
     // Slider input.
     slider.addEventListener("input", function(){
         currentIndex = Number(this.value);
-        yearLabel.innerHTML = timestamps[currentIndex];
+        yearLabel.innerHTML = formatYearLabel(timestamps[currentIndex]);
         updatePropSymbols(timestamps[currentIndex]);
     });
 
@@ -273,7 +293,7 @@ function createSequenceControls(){
             currentIndex = 0; // Loop to start
         }
         slider.value = currentIndex;
-        yearLabel.innerHTML = timestamps[currentIndex];
+        yearLabel.innerHTML = formatYearLabel(timestamps[currentIndex]);
         updatePropSymbols(timestamps[currentIndex]);
     });
 
@@ -284,7 +304,7 @@ function createSequenceControls(){
             currentIndex = timestamps.length - 1; // Loop to end
         }
         slider.value = currentIndex;
-        yearLabel.innerHTML = timestamps[currentIndex];
+        yearLabel.innerHTML = formatYearLabel(timestamps[currentIndex]);
         updatePropSymbols(timestamps[currentIndex]);
     });
 }
