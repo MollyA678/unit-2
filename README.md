@@ -1,4 +1,4 @@
-Site is running
+Site is running at [https://github.com/MollyA678/unit-2.git](url)
 
 About this Map
 This map is inspired by my <strong>Intro to East Asian Civilizations</strong> coursework this semester.
